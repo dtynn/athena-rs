@@ -19,4 +19,13 @@ impl PacketVer {
             _ => 15,
         }
     }
+
+    // returns (body length, max item, page size)
+    fn mail_content(&self) -> (usize, usize, Option<usize>) {
+        if self.0 < 20150513 {
+            return (200, 1, None);
+        }
+
+        (500, 5, Some(7))
+    }
 }
