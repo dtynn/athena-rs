@@ -116,3 +116,8 @@ pub const EL_CALSS_MAX: u32 = EL_CLASS_BASE + MAX_ELEMENTAL_CLASS - 1;
 pub const MAX_ACHIEVEMENT_OBJECTIVES: usize = 10;
 pub const MAX_ACHIEVEMENT_DEPENDENTS: usize = 20;
 pub const ACHIEVEMENT_NAME_LENGHT: usize = 50;
+
+// ??
+pub const MD_MASK: u32 = 0x000ffff;
+pub const ATR_MASK: u32 = 0x0ff0000;
+pub const CL_MASK: u32 = 0xf000000;
