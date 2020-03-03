@@ -22,20 +22,16 @@ macro_rules! configure {
             }
         }
     };
-
-    (FIELD $(#[$meta:meta])* $field_name: ident : $field_type: ty = $field_value: expr) => {
-            $(
-            #[$meta]
-             )*
-            pub $field_name: $field_type,
-    };
-
-    (FIELD $(#[$meta:meta])* $field_name: ident : $field_type: ty = $field_value: block) => {
-    };
 }
 
 configure! {
     Config,
+
+    /// sc_data saving
+    enable_sc_saving: bool = true,
+
+    /// server-side hotkey saving
+    hotkey_saving: bool = true,
 
     /// max amount of maps available on a server
     max_map_per_server: usize = 1500,
