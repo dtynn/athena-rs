@@ -3,6 +3,6 @@
 
 #![warn(missing_docs)]
 
-pub(crate) mod common;
 mod proto;
 mod server;
+mod util;
